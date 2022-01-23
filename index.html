@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    Wi-Fiパスワードをコピーして「設定」アプリに貼り付けてください。
+
+    <input id="copyTarget" type="text" value="36fc94c06d0a3" readonly>
+    <button onclick="copyToClipboard()">Copy</button>
+
+    <script>
+        function copyToClipboard() {
+            var copyTarget = document.getElementById("copyTarget");
+            copyTarget.select();
+            document.execCommand("Copy");
+            alert("コピーできました!：" + copyTarget.value);
+        }
+    </script>
+</body>
+</html>
